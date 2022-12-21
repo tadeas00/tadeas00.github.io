@@ -329,6 +329,12 @@ hr {
 	.nav-bar li{
 		opacity:0;
 	}
+	iframe {
+        width: 490px;
+        height: 400px;
+        margin:auto;
+        display:block;
+    }
 }
 
 .nav-active{
