@@ -133,6 +133,7 @@ iframe {
     height: 400px;
     margin:auto;
     display:block;
+	box-shadow: 3px 0px 20px var(--main-decor-color);
 }
 
 
@@ -217,7 +218,7 @@ footer {
 	overflow: hidden;
 	transition: 3s;
 	margin: 0 2%;
-	box-shadow: 5px 0px 40px var(--main-decor-color);
+	box-shadow: 3px 0px 20px var(--main-decor-color);
 	line-height: 0;
 }
   
