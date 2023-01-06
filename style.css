@@ -111,7 +111,49 @@ a.nav-link{
     left: 0;
     right: 0;
 	opacity:.20;
-}  
+}
+
+#home2{ 	
+	margin: auto;
+	height: 100vh;
+	color: var(--main-fonts-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+#home2 .filter2{
+	background: url('images/vslogo.jpg') no-repeat;
+	background-size: cover;
+	background-position:center;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	opacity:.20;
+}
+
+#home3{ 	
+	margin: auto;
+	height: 100vh;
+	color: var(--main-fonts-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+#home3 .filter3{
+	background: url('images/oddil.jpg') no-repeat;
+	background-size: cover;
+	background-position:center;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	opacity:.20;
+}
 
 .intro {
 	text-align:center;
@@ -384,3 +426,30 @@ hr {
 .nav-active{
 	transform:translatex(0%);
 }
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+  }
+  
+  .dropdown-menu {
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 0px 5px var(--main-decor-color);
+	z-index: 1;
+  }
+  
+  .dropdown-menu a {
+	color: rgb(255, 255, 255);
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  .dropdown:hover .dropdown-menu {
+	display: block;
+	color: #fff;
+    background: var(--main-header-background);
+  }
