@@ -26,7 +26,15 @@ h3 {
     padding-bottom: 15px;
     letter-spacing: normal;
 	font-style: normal;
-	font-size: 32px;
+	font-size: 40px;
+	color: var(--main-fonts-color);
+	text-shadow: 5px 0px 40px var(--main-icon-color);
+}
+h5 {
+    padding-bottom: 15px;
+    letter-spacing: normal;
+	font-style: normal;
+	font-size: 20px;
 	color: var(--main-fonts-color);
 	text-shadow: 5px 0px 40px var(--main-icon-color);
 }
@@ -155,6 +163,27 @@ a.nav-link{
 	opacity:.20;
 }
 
+#home4{ 	
+	margin: auto;
+	height: 100vh;
+	color: var(--main-fonts-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+#home4 .filter4{
+	background: url('images/staff.jpg') no-repeat;
+	background-size: cover;
+	background-position:center;
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	opacity:.20;
+}
+
 .intro {
 	text-align:center;
     color: var(--main-fonts-color);
@@ -174,7 +203,17 @@ iframe {
     width: 933.5px;
     height: 400px;
     margin:auto;
-    display:block;
+	/*box-shadow: 3px 0px 20px var(--main-decor-color);*/
+	display: flex; 
+ 	align-items: center; 
+ 	justify-content: center;
+	text-align: center;
+}
+
+.border {
+	width: 933.5px;
+    height: 400px;
+    margin:auto;
 	box-shadow: 3px 0px 20px var(--main-decor-color);
 }
 
@@ -215,6 +254,13 @@ iframe {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
+}
+
+.fb {
+	display: flex; 
+ 	align-items: center; 
+ 	justify-content: center;
+	text-align: center;
 }
 
 .center {
