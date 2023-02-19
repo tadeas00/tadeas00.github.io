@@ -31,10 +31,10 @@ h3 {
 	text-shadow: 5px 0px 40px var(--main-icon-color);
 }
 h5 {
-    padding-bottom: 15px;
+    padding-bottom: -5px;
     letter-spacing: normal;
 	font-style: normal;
-	font-size: 20px;
+	font-size: 25px;
 	color: var(--main-fonts-color);
 	text-shadow: 5px 0px 40px var(--main-icon-color);
 }
@@ -227,7 +227,7 @@ a.nav-link2{
 	justify-content: space-evenly;
 }
 #home6 .filter6{
-	background: url('images/staff.jpg') no-repeat;
+	background: url('images/flotilapage.jpg') no-repeat;
 	background-size: cover;
 	background-position:center;
     position: absolute;
