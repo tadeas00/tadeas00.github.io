@@ -86,11 +86,23 @@ a.nav-link{
 	text-transform: uppercase;
 }
 
+a.nav-link2{
+	margin: 2px;
+	padding: 5px 10px;
+	text-decoration: none;
+	color: var(--main-fonts-color);
+	cursor: pointer;
+}
+
 .active{
 	background: var(--main-decor-color);
 }
 
 .nav-link:hover {
+	color: #fff;
+    background: var(--main-decor-color);
+}
+.nav-link2:hover {
 	color: #fff;
     background: var(--main-decor-color);
 }
@@ -581,3 +593,7 @@ hr {
 	color: #fff;
     background: var(--main-header-background);
   }
+  .dropdown-menu:hover {
+	color: #fff;
+    background: var(--main-decor-color);
+}
