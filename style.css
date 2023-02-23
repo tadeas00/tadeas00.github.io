@@ -59,6 +59,19 @@ header{
 	opacity: 0;
 }
 
+button{
+	background-color: var(--main-decor-color);
+	color: var(--main-fonts-color);
+	text-align: center;
+	display: inline-block;
+	font-size: 16px;
+	font-family: var(--main-font-family);
+	text-transform: uppercase;
+	padding: 15px 32px;
+	border-radius: 30%;
+	box-shadow: 0px 0px 5px var(--main-decor-color);
+}
+
 header:hover{
 	opacity: 1;
 	background: var(--main-header-background);
@@ -319,7 +332,6 @@ iframe {
 	padding: 10px;
 	display: flex;
 	position: center;
-    align-items: space-around;
 	justify-content:center;
 }
 
@@ -597,3 +609,9 @@ hr {
 	color: #fff;
     background: var(--main-decor-color);
 }
+
+  .description {
+	  display: none;
+	  color: #f9f9f9;
+  }
+

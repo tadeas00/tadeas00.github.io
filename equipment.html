@@ -6,7 +6,7 @@
         <link rel="icon" type="image/png" href="images/logo.png">
         <title>Povinné vybavení</title>
         <link href="style.css" rel="stylesheet" type="text/css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="script.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -63,7 +63,44 @@
                        </div>
                         
                     </section> 
-                 </div> 
+                 </div>
+                <div id="about">
+                    <section class="intro">
+                        <button class="button" data-target="description1">KPZ</button>
+                        <div id="description1" class="description">
+                            <h3><i>KRABIČKA POSLEDNÍ ZÁCHRANY</i><hr></h3>
+                            <p>kousek svíčky, několik zápalek, škrtátko, kousek březové kůry, kousek papíru, tužka, jehla a nitě, zavírací špendlík, knoflíky, polštářková náplast, kousek drátu a provázku, gumička, 50,- Kč mince, několik drobných mincí, lístek s tísňovými telefonními čísly</p>
+                        </div>
+                        <button class="button" data-target="description2">TAP</button>
+                        <div id="description2" class="description">
+                            <h3>TÁBORNICKÉ POTŘEBY</h3>
+                            <p>zápisník, psací potřeby, zápisník vodáckých hodností, zápisník vodácké akademie, zápisník km, KPZ, kapesní nůž, uzlovačka, signalizační praporky, čtyřcípý šátek, 3 hadráky, 20 kartiček s osobní značkou, hřeben, kartáček na zuby, pasta</p></div>
+                        <button class="button" data-target="description3">VAR</button>
+                        <div id="description3" class="description">Popis 2</div>
+                        <button class="button" data-target="description4">KRO</button>
+                        <div id="description4" class="description">Popis 2</div>
+                        <button class="button" data-target="description4">SPP</button>
+                        <div id="description5" class="description">Popis 2</div>
+                        <button class="button" data-target="description6">VOD</button>
+                        <div id="description6" class="description">Popis 2</div>
+                        <button class="button" data-target="description7">UNI</button>
+                        <div id="description7" class="description">Popis 2</div>
+                        <button class="button" data-target="description8">SCH</button>
+                        <div id="description8" class="description">Popis 2</div>
+                        <button class="button" data-target="description9">V1D</button>
+                        <div id="description9" class="description">Popis 2</div>
+                        <button class="button" data-target="description10">V2D</button>
+                        <div id="description10" class="description">Popis 2</div>
+
+                    </section>
+                </div>
+                <script>
+                    $(".button").click(function() {
+                        var target = $(this).data("target");
+                        $(".description").not("#" + target).hide();
+                        $("#" + target).show();
+                    });
+                </script>
               
             </main>
             <footer class="copyright">© 2023
