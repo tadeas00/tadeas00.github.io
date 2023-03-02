@@ -30,11 +30,19 @@ h3 {
 	color: var(--main-fonts-color);
 	text-shadow: 5px 0px 40px var(--main-icon-color);
 }
+h4 {
+	padding-bottom: 15px;
+	letter-spacing: normal;
+	font-style: normal;
+	font-size: 30px;
+	color: var(--main-fonts-color);
+	text-shadow: 5px 0px 40px var(--main-icon-color);
+}
 h5 {
     padding-bottom: -5px;
     letter-spacing: normal;
 	font-style: normal;
-	font-size: 25px;
+	font-size: 20px;
 	color: var(--main-fonts-color);
 	text-shadow: 5px 0px 40px var(--main-icon-color);
 }
