@@ -7,7 +7,9 @@
     --main-header-background:#0000ff;
 	--main-font-family: 'Poppins', sans-serif;
     --main-icon-color:#0000ff;
+	
 }
+
 
 *{
 	margin: 0;
@@ -409,44 +411,61 @@ footer {
 }
 
 /* Gallery*/
-.container {
-	display: flex;
-	width: 100%;
-	padding: 4% 2%;
+* {
 	box-sizing: border-box;
-	height: 100vh;
 }
-  
-.box {
-	flex: 1;
-	overflow: hidden;
-	transition: 3s;
-	margin: 0 2%;
-	box-shadow: 3px 0px 20px var(--main-decor-color);
-	line-height: 0;
+
+img {
+	max-width: 100%;
+	vertical-align: bottom;
+
 }
-  
-.box > img {
-	width: 200%;
-	height: calc(100% - 10vh);
-	object-fit: cover; 
-	transition: 3s;
+
+.gallery {
+	display: flex;
+	margin: 5px auto;
+	max-width: 900px;
+	position: relative;
+	padding-top: 66.66667%;
+	display: flex;
+	justify-content: center;
+	text-align: center;
 }
-  
-.box > span {
-	font-size: 3vh;
+@media screen and (min-width: 600px) {
+	.gallery {
+		padding-top: 400px;
+	}
+}
+
+.gallery__img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	padding-left: 200px;
+	padding-right: 200px;
+	padding-top: 0px;
+}
+
+.gallery__thumb {
+	padding-top: 6px;
+	margin: 5px;
 	display: block;
 	text-align: center;
-	height: 7vh;
-	line-height: 1.5;
-	color: var(--main-fonts-color);
-	text-shadow: 5px 0px 40px var(--main-icon-color);
 }
-  
-.box:hover { flex: 1 1 50%; }
-.box:hover > img {
-	width: 100%;
-	height: 100%;
+
+.gallery__selector {
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	text-align: center;
+}
+.gallery__selector:checked + .gallery__img {
+	opacity: 1;
+}
+.gallery__selector:checked ~ .gallery__thumb > img {
+	box-shadow: 0 0 0 3px var(--main-decor-color);
 }
 
 /*──── hr ─────*/
@@ -535,7 +554,7 @@ hr {
 
 @media only screen and (max-width: 500px) {
 
-	#home, #about, #contact, #timeline, #plan{
+	#home, #about, #contact, #gallery, #plan{
         overflow-x: hidden;
 	}
 	header{
