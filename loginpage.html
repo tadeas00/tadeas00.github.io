@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <link rel="icon" type="image/png" href="images/logo.png">
+        <title>Přihlášení do Členské sekce</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="script.js"></script>
+  </head>
+  <body>
+    <style>
+        @import url(http://weloveiconfonts.com/api/?family=entypo);
+        @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+
+      [class*="entypo-"]:before {
+        font-family: 'entypo', sans-serif;
+      }
+
+      *,
+      *:before,
+      *:after {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box; 
+      }
+
+
+      h2 {
+        color:rgba(255,255,255,.8);
+        margin-left:12px;
+      }
+
+      body {
+        background: #0000ff;
+        font-family: 'Roboto', sans-serif;
+  
+      }
+
+      form {
+        position:relative;
+        margin: 50px auto;
+        width: 380px;
+        height: auto;
+      }
+
+      input {
+        padding: 16px;
+        border-radius:7px;
+        border:0px;
+        background: rgba(255,255,255,.2);
+        display: block;
+        margin: 15px;
+        width: 300px;  
+        color:rgba(0, 132, 255, 0.95);
+        font-size:18px;
+        height: 54px;
+      }
+      
+      input:focus {
+        outline-color: rgba(0,0,0,0);
+        background: rgba(0, 132, 255, 0.95);
+        color: #ff6600;
+      }
+      
+      #log {
+        float:right;
+        height: 121px;
+        width: 50px;
+        border: 0px;
+        background: #ff6600;
+        border-radius:7px;
+        padding: 10px;
+        color:white;
+        font-size:22px;
+      }
+
+      #reg {
+        border: 0px;
+        background: #ff6600;
+        border-radius:7px;
+        padding: 10px;
+        color:white;
+        font-size:22px;
+        text-align:center;
+        font-family: var('Poppins', sans-serif);
+      }
+      
+      .inputUserIcon {
+        position:absolute;
+        top:68px;
+        right: 80px;
+        color:white;
+      }
+      
+      .inputPassIcon {
+        position:absolute;
+        top:136px;
+        right: 80px;
+        color:white;
+      }
+      
+      input::-webkit-input-placeholder {
+        color: rgba(0, 132, 255, 0.95);
+      }
+      
+      input:focus::-webkit-input-placeholder {
+        color: #e74c3c;
+      }
+
+      p {
+        margin: 20px;
+	      font-size:1.2rem;
+	      font-family: var('Poppins', sans-serif);
+	      text-align:center;
+        color: white;
+      }
+      .text-center {
+        text-align: center;
+      }
+    </style>
+    <script>
+        $(".user").focusin(function(){
+        $(".inputUserIcon").css("color", "#e74c3c");
+        }).focusout(function(){
+        $(".inputUserIcon").css("color", "white");
+        });
+
+        $(".pass").focusin(function(){
+        $(".inputPassIcon").css("color", "#e74c3c");
+        }).focusout(function(){
+        $(".inputPassIcon").css("color", "white");
+        });
+    </script>
+        <!--d="post" action="register.php">
+        <input type="text" name="username" placeholder="Uživatelské jméno">
+        <input type="password" name="password" placeholder="Heslo">
+        <input type="password" name="confirm_password" placeholder="Potvrzení hesla">
+        <input type="submit" name="submit" value="Registrovat se">
+      </form> -->
+
+
+
+      <form method="post" action="login.php">
+        <h2><span class="entypo-login"><i class="fa fa-sign-in"></i></span> Přihlášení</h2>
+        <button id="log" class="submit"><span class="entypo-lock"><i class="fa fa-lock"></i></span></button>
+        <input type="text" id="username" name="username" required class="user" placeholder="Uživatelské jméno"><br>
+        <input type="password" id="password" name="password" required class="pass" placeholder="Heslo"><br>
+      </form>
+
+      <p>Nemáte ještě účet? Založit ho je možné zde!</p>
+      <div class="text-center">
+        <a href="register.html"><button id="reg">Registrace</button>
+      </div>
+  </body>
+</html>
