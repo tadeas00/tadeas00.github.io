@@ -475,6 +475,7 @@ img {
 	padding-left: 200px;
 	padding-right: 200px;
 	padding-top: 0px;
+	width: 100%;
 }
 
 .gallery__thumb {
@@ -623,8 +624,20 @@ hr {
     }
 }
 
+@media screen and (max-width: 955px) {
+	#gallery {
+		display: none;
+	}
+}
 
-@media only screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
+	.filter {
+		width: 100%;
+	}
+}
+
+
+@media only screen and (max-width: 1000px) {
 
 	#home, #about, #contact, #gallery, #plan{
         overflow-x: hidden;
@@ -658,7 +671,7 @@ hr {
 	.hamburger{
 		position:absolute;
 		top: 17px;
-		right: 25%;
+		right: 10%;
 		display: block;
 		cursor:pointer;
 		z-index: 5;
@@ -667,7 +680,7 @@ hr {
 		opacity:0;
 	}
     iframe {
-        width: 450px;
+        width: 100%;
         height: 400px;
         margin:auto;
         display:block;

@@ -136,11 +136,12 @@
         });
     </script>
         <form method="post" action="register.php">
-            <h2><span class="entypo-login"><i class="fa fa-sign-in"></i></span> Registrace</h2>
-            <input type="text" name="username" placeholder="Uživatelské jméno">
-            <input type="password" name="password" placeholder="Heslo">
-            <input type="password" name="confirm_password" placeholder="Potvrzení hesla">
-            <input id="reg" type="submit" name="submit" value="Registrovat se">
+          <h2><span class="entypo-login"><i class="fa fa-sign-in"></i></span> Registrace</h2>
+          <input type="text" name="username" placeholder="Uživatelské jméno" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <input type="password" name="password" placeholder="Heslo" required>
+          <input type="password" name="confirm_password" placeholder="Potvrzení hesla" required>
+          <input type="submit" name="submit" value="Registrovat se">
         </form>
 
 

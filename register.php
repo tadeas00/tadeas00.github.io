@@ -6,28 +6,41 @@ $password = "a3fkVTRU";
 $dbname = "d316753_login";
 $connection = mysqli_connect($host, $user, $password, $dbname);
 
-// kontrola, zda byl odeslán formulář
+// Kontrola, zda byl odeslán formulář
 if(isset($_POST['submit'])) {
-  // kontrola, zda jsou vyplněna všechna pole
-  if(empty($_POST['username']) || empty($_POST['password']) || empty($_POST['confirm_password'])) {
+  // Kontrola, zda jsou vyplněna všechna pole
+  if(empty($_POST['username']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['confirm_password'])) {
     echo "Vyplňte prosím všechna pole.";
   } else {
-    // kontrola, zda heslo a potvrzení hesla se shodují
+    // Kontrola, zda heslo a potvrzení hesla se shodují
     if($_POST['password'] != $_POST['confirm_password']) {
       echo "Heslo a potvrzení hesla se neshodují.";
     } else {
-      // kontrola, zda uživatelské jméno již neexistuje v databázi
+      // Kontrola, zda uživatelské jméno nebo e-mail již existuje v databázi
       $username = $_POST['username'];
-      $query = "SELECT * FROM users WHERE username='$username'";
+      $email = $_POST['email'];
+      $query = "SELECT * FROM users WHERE username='$username' OR email='$email'";
       $result = mysqli_query($connection, $query);
       if(mysqli_num_rows($result) > 0) {
-        echo "Uživatelské jméno již existuje.";
+        echo "Uživatelské jméno nebo e-mail již existuje.";
       } else {
-        // vložení nového uživatele do databáze
+        // Vložení nového uživatele do databáze
         $password = $_POST['password'];
-        $query = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
+        $query = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
         mysqli_query($connection, $query);
         header("Location: loginpage.html");
+
+        // Odeslání e-mailu s přihlašovacími údaji
+        $to = $_POST['email'];
+        $subject = "Přihlašovací údaje";
+        $message = "Vaše přihlašovací údaje:\nUživatelské jméno: $username\nHeslo: $password\nV případě nesrovnalostí se nebojte napsat na tento email (info@bilapodkova.eu) nebo správce webu (admin@bilapodkova.eu nebo tadeasjanprek6@gmail.com)\n\nHezký zbytek dne z Bílé podkovy!";
+        $headers = "From: info@bilapodkova.eu";
+
+        if(mail($to, $subject, $message, $headers)) {
+          echo "Registrace proběhla úspěšně. Byl vám zaslán e-mail s přihlašovacími údaji.";
+        } else {
+        echo "Nepodařilo se odeslat e-mail s přihlašovacími údaji.";
+        }
       }
     }
   }
